@@ -11,3 +11,72 @@
  *= require_self
  *= require_tree .
  */
+html, body {
+	width: 100%;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main_header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.add_button {
+	width: 180px;
+	height: 40px;
+	border-radius: 2px;
+	background: #2da9e3;
+	color: #fff;
+	text-align: center;
+	font-size: 1.3em;
+	line-height: 40px;
+	display: inline-block;
+}
+
+.add_button:hover {
+	background: #fff;
+	line-height: 36px;
+	color: #2da9e3;
+	border: 2px solid #2da9e3;
+}
+
+.main_content {
+	margin-top: 75px;
+}
+
+.logo {
+	width: 300px;
+	display: block;
+	margin: 5px 0 5px 10px;
+}
+
+.index_event_image {
+	width: 200px;
+	margin: 5px 10px 0 0px;
+}
+
+.show_event_image {
+	width: 200px;
+	margin: 5px 10px 0 10px;
+}
+
+.iframe {
+	width: 100%;
+	height: 600px;
+	margin: 0 auto;
+	padding: 10px 8px 8px 8px;
+}
+
+.float_left {
+	float: left;
+}

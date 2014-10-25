@@ -1,19 +1,21 @@
-<h1>Add a new event</h1>
+<div class="main_content">
+	<h1>Add a new event</h1>
 
-<%= form_for @event do |f| %>
-	<p>Event Name: <%= f.text_field :title %></p>
-	<p>Date: <%= f.date_field :date %></p>
-	<p>Time: <%= f.time_field :time %></p>
-	<p>Venue: <%= f.text_field :venue %></p>
-	<p>Address: <%= f.text_field :address %></p>
-	<p>Event URL: <%= f.text_field :url %></p>
-	<p>Image URL: <%= f.text_field :imageurl %></p>
-	<p>Event Type: <%= f.text_field :type %></p>
-	<p>Description: <%= f.text_area :description %></p>
-	<p>Neighborhood: <%= f.text_field :neighborhood %></p>
+	<%= form_for @event do |f| %>
+		<p>Event Name: <%= f.text_field :title %></p>
+		<p>Date: <%= f.date_field :date %></p>
+		<p>Time: <%= f.time_field :time %></p>
+		<p>Venue: <%= f.text_field :venue %></p>
+		<p>Address: <%= f.text_field :address %></p>
+		<p>Event URL: <%= f.text_field :url %></p>
+		<p>Image URL: <%= f.text_field :imageurl %></p>
+		<p>Event Type: <%= f.text_field :type %></p>
+		<p>Description: <%= f.text_area :description %></p>
+		<p>Neighborhood: <%= f.text_field :neighborhood %></p>
 
-	<%= f.submit "Add new event" %><Br><br>
+		<%= f.submit "Add new event" %><Br><br>
 
-<% end %>
+	<% end %>
 
-<%= link_to "Back to the full list of events", events_path %>
+	<%= link_to "Back to the full list of events", events_path %>
+</div>
