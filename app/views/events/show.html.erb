@@ -1,0 +1,8 @@
+<h1><%= @event.title %></h1>
+@ <%= @event.venue %>
+
+<p><%= @event.date.strftime("%A, %b %d") %> at <%= @event.time.strftime("%I:%M %p") %></p>
+<p><%= link_to "Back", events_path %></p>
+		<p><a href="<%= @event.url %>" target="_blank"><img src="<%= @event.imageurl %>" width="200"></a></p>
+		<p><iframe src="<%= @event.url %>" width="100%" height="600"></iframe></p>
+

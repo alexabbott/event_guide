@@ -1,0 +1,15 @@
+<h1>Upcoming Free Events</h1>
+
+<%= link_to "Add a new event", new_event_path %>
+
+<ul>
+<% @events.each do |e| %>
+	<li>
+		<p><strong><%= e.title %></strong> @ <%= e.venue %></p>
+		<p><%= e.date.strftime("%A, %b %d") %> at <%= e.time.strftime("%I:%M %p") %></p>
+		<p><a href="/events/<%= e.id %>"><img src="<%= e.imageurl %>" width="200"></a></p>
+		<p><%= link_to "More info", event_path(e) %></p>
+	</li>
+<% end %>
+</ul>
+
