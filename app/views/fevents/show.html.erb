@@ -1,0 +1,19 @@
+<div class="main_content">
+
+	<div class="float_left">
+		<a href="<%= @fevent.url %>" target="_blank"><img src="<%= @fevent.imageurl %>" class="show_event_image"></a>
+	</div>
+
+	<div>
+		<h1><%= @fevent.title %></h1>
+		@ <%= @fevent.venue %>
+
+		<p><%= @fevent.date.strftime("%A, %b %d") %> at <%= @fevent.time.strftime("%I:%M %p") %></p>
+		<p><%= link_to "Back", events_path %></p>
+	</div>
+
+
+
+	<p><iframe src="<%= @fevent.url %>" class="iframe animated fadeIn" frameBorder="0"></iframe></p>
+</div>
+

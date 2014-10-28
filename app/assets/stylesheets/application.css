@@ -24,14 +24,28 @@ a {
 	text-decoration: none;
 }
 
+li {
+	display: inline-block;
+	width: 280px;
+}
+
+
+
+h3 {
+	display: inline-block;
+}
+
 .main_header {
 	width: 100%;
 	position: fixed;
 	top: 0;
 	background-color: rgba(0,0,0,0.8);
+	z-index: 1;
 }
 
 .add_button {
+	float: right;
+	margin: 15px 15px 0 0;
 	width: 180px;
 	height: 40px;
 	border-radius: 2px;
@@ -55,19 +69,37 @@ a {
 }
 
 .logo {
-	width: 300px;
-	display: block;
+	width: 180px;
+	display: inline-block;
 	margin: 5px 0 5px 10px;
 }
 
 .index_event_image {
-	width: 200px;
+	width: 275px;
+	height: 200px;
 	margin: 5px 10px 0 0px;
+}
+
+.index_fevent_image {
+	width: 100%;
 }
 
 .show_event_image {
 	width: 200px;
 	margin: 5px 10px 0 10px;
+}
+
+.at_symbol {
+	color: #2da9e3;
+}
+
+.hideme {
+	visibility: hidden;
+}
+
+.carousel_picker {
+	position: absolute;
+	top: 50%;
 }
 
 .iframe {

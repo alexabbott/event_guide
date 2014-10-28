@@ -1,6 +1,7 @@
 <div class="main_content">
 
-	
+	<a href="/events/new" border="0"><div class="add_button">Add a New Event</div></a>
+
 
 	<!-- Carousel starts here -->
 
@@ -15,7 +16,7 @@
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner">
 	    <div class="item active">
-	      <%= link_to image_tag("scon.jpg", :width => "100%", :alt => "SantaCon"), "fevents/544e77e2416c65249c020000" %>
+	      <%= link_to image_tag("scon.jpg", :width => "100%", :alt => "SantaCon")  %>
 	      <div class="carousel-caption">
 	        <h3><%= @fevents.last.title %></h3>
 	        <p><span class="at_symbol">@</span> <%= @fevents.last.venue %></p>
@@ -23,7 +24,7 @@
 	      </div>
 	    </div>
 	    <div class="item">
-	      <%= link_to image_tag("west.jpg", :width => "100%", :alt => "Westside Thanksgiving"), "fevents/544e840f416c653441000000" %>	      
+	      <%= link_to image_tag("west.jpg", :width => "100%", :alt => "Westside Thanksgiving") %>	      
 	      <div class="carousel-caption">
 	        <h3><%= @fevents.first.title %></h3>
 			 <p><span class="at_symbol">@</span> <%= @fevents.first.venue %></p>
@@ -43,16 +44,4 @@
 
 		<!-- Carousel ends here -->
 
-	<h1>More Free Events</h1>
-
-	<% @events.each do |e| %>
-		<div class="col-md-3 col-sm-6">
-			<p><h3><%= e.title %></h3><br>
-				<span class="at_symbol">@</span> <%= e.venue %></p>
-			<p><%= e.date.strftime("%A, %b %d") %> | <%= e.time.strftime("%I:%M %p") %></p>
-			<p><a href="/events/<%= e.id %>"><img src="<%= e.imageurl %>" class="index_event_image"></a></p>
-			<p><%= link_to "More info", event_path(e) %></p>
-		</div>
-	<% end %>
 </div>
-

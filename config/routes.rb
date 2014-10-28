@@ -1,9 +1,8 @@
 Eventguide::Application.routes.draw do
+  root 'events#index'
 
   # CRUD CATEGORY
 # VERB "URL PATH" => "controller_name_plural#action", as: :folder_path_variable
-
-# CRUD:
 
 # CRUD CATEGORY + PROCESS + HTML VERBS
  # CREATE  
@@ -29,6 +28,33 @@ Eventguide::Application.routes.draw do
  # DELETE   
  # ---  DELETE  
  delete 'events/:id' => 'events#destroy', as: :delete_event
+
+ # ------
+
+
+
+
+ get 'fevents/new' => 'fevents#new', as: :new_fevent
+
+ # ---  SAVE  
+ post 'fevents' => 'fevents#create', as: :create_fevent
+
+ # READ  
+ # ---  LIST  
+ get 'fevents' => 'fevents#index', as: :fevents
+
+ # ---  ONE   
+ get 'fevents/:id' => 'fevents#show', as: :fevent
+
+ # UPDATE    
+ # ---  EDIT  
+ get 'fevents/:id/edit' => 'fevents#edit', as: :edit_fevent
+ # ---  SAVE 
+ patch 'fevents/:id' => 'fevents#update', as: :update_fevent
+
+ # DELETE   
+ # ---  DELETE  
+ delete 'fevents/:id' => 'fevents#destroy', as: :delete_fevent
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

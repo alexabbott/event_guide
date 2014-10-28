@@ -2,6 +2,7 @@ class EventsController < ApplicationController
 
 def index
 	@events = Event.all.sort_by &:date
+	@fevents = Fevent.all.sort_by &:date
 end
 
 def show
@@ -13,7 +14,7 @@ def new
 end
 
 def create
-	@event = Event.new(params.require(:event).permit(:title, :date, :time, :url, :imageurl, :type, :description, :venue, :address, :neighborhood))
+	@event = Event.new(params.require(:event).permit(:title, :date, :time, :url, :imageurl, :category, :description, :venue, :address, :neighborhood))
 	if @event.save
 		redirect_to events_path
 	else
@@ -27,7 +28,7 @@ end
 
 def update
 	@event = Event.find(params[:id])
-	if @event.update_attributes(params.require(:event).permit(:title, :date, :time, :url, :imageurl, :type, :description, :venue, :address, :neighborhood))
+	if @event.update_attributes(params.require(:event).permit(:title, :date, :time, :url, :imageurl, :category, :description, :venue, :address, :neighborhood))
 		redirect_to events_path
 	else
 		render 'edit'

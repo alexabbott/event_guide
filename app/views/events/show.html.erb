@@ -6,7 +6,7 @@
 
 	<div>
 		<h1><%= @event.title %></h1>
-		@ <%= @event.venue %>
+		<span class="at_symbol">@</span> <%= @event.venue %>
 
 		<p><%= @event.date.strftime("%A, %b %d") %> at <%= @event.time.strftime("%I:%M %p") %></p>
 		<p><%= link_to "Back", events_path %></p>

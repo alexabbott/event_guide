@@ -1,8 +1,8 @@
 <div class="main_content">
 
-	<h1>Edit Event</h1>
+	<h1>Edit Featured Event</h1>
 
-	<%= form_for @event do |f| %>
+	<%= form_for @fevent do |f| %>
 		<p>Event Name: <%= f.text_field :title %></p>
 		<p>Date: <%= f.date_field :date %></p>
 		<p>Time: <%= f.time_field :time %></p>
@@ -11,10 +11,10 @@
 		<p>Neighborhood: <%= f.select :neighborhood, [['Choose a neighborhood...'],['Alhambra'],['Altadena'],['Arcadia'],['Atwater Village'],['Baldwin Park'],['Beverly Hills'],['Boyle Heights'],['Burbank'],['Century City'],['Chinatown'],['Culver City'],['Downtown LA'],['Eagle Rock'],['East Hollywood'],['East LA'],['Echo Park'],['El Monte'],['Exposition Park / USC'],['Glendale'],['Griffith Park'],['Hermosa Beach'],['Highland Park'],['Hollywood'],['Hollywood Hills'],['Industry'],['Inglewood'],['Irwindale'],['Koreatown'],['La Cañada'],['Lincoln Heights'],['Long Beach'],['Los Feliz'],['Malibu'],['Manhattan Beach'],['Marina del Rey'],['Mid-City'],['Mid-Wilshire'],['Monrovia'],['Monterey Park'],['North Hollywood'],['Northridge'],['Orange'],['Palms'],['Paramount'],['Pasadena'],['Pico-Robertson'],['Playa del Rey'],['Pomona'],['Redondo Beach'],['Rosemead'],['San Dimas'],['San Gabriel'],['San Marino'],['Santa Monica'],['Sherman Oaks'],['Sierra Madre'],['Silver Lake'],['Studio City'],['Temple City'],['Torrance'],['Universal City'],['University Park'],['Van Nuys'],['Venice'],['West Hollywood'],['West Lake'],['Westwood'],['Woodland Hills']] %></p>
 		<p>Event URL: <%= f.text_field :url %></p>
 		<p>Image URL: <%= f.text_field :imageurl %></p>
-		<img src="<%= @event.imageurl %>" class="event_image">
+		<img src="<%= @fevent.imageurl %>" class="event_image">
 		<p>Event Type: <%= f.select :category, [['Choose a category...'],['Art Walk','art walk'],['Free Booze','free booze'],['Free Food','free food'],['Free Music','free music'],['Free Yoga Class','free yoga class'],['Other','other']] %></p>
 		<p>Description: <%= f.text_area :description %></p>
-		
+
 		<%= f.submit "Submit" %><br><br>
 
 	<% end %>
