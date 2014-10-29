@@ -1,5 +1,10 @@
 Eventguide::Application.routes.draw do
+
   root 'events#index'
+
+  resources :users, except: [:destroy]
+
+  resource :sessions, only: [:create, :new, :destroy]
 
   # CRUD CATEGORY
 # VERB "URL PATH" => "controller_name_plural#action", as: :folder_path_variable
