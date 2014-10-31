@@ -113,7 +113,7 @@ end
 def create
 	@event = Event.new(params.require(:event).permit(:title, :date, :time, :url, :imageurl, :category, :description, :venue, :address, :neighborhood))
 	if @event.save
-		redirect_to events_path
+		redirect_to :root
 	else
 		render 'new'
 	end
@@ -126,7 +126,7 @@ end
 def update
 	@event = Event.find(params[:id])
 	if @event.update_attributes(params.require(:event).permit(:title, :date, :time, :url, :imageurl, :category, :description, :venue, :address, :neighborhood))
-		redirect_to events_path
+		redirect_to :root
 	else
 		render 'edit'
 	end
@@ -135,7 +135,7 @@ end
 def destroy
 	@event = Event.find(params[:id])
 	@event.destroy
-	redirect_to events_path
+	redirect_to :root
 end
 
 end

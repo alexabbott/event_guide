@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { 
           session[:user_id] = @user.id.to_s
-          redirect_to events_path
+          redirect_to :root
           # redirect_to @user, notice: 'User was successfully created.' 
         }
         format.json { render action: 'show', status: :created, location: @user }

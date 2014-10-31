@@ -15,7 +15,7 @@ end
 def create
 	@fevent = Fevent.new(params.require(:fevent).permit(:title, :date, :time, :url, :imageurl, :category, :description, :venue, :address, :neighborhood))
 	if @fevent.save
-		redirect_to fevents_path
+		redirect_to :root
 	else
 		render 'new'
 	end
@@ -28,7 +28,7 @@ end
 def update
 	@fevent = Fevent.find(params[:id])
 	if @fevent.update_attributes(params.require(:fevent).permit(:title, :date, :time, :url, :imageurl, :category, :description, :venue, :address, :neighborhood))
-		redirect_to fevents_path
+		redirect_to :root
 	else
 		render 'edit'
 	end
@@ -37,7 +37,7 @@ end
 def destroy
 	@fevent = Fevent.find(params[:id])
 	@fevent.destroy
-	redirect_to fevents_path
+	redirect_to :root
 end
 
 end
