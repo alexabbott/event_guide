@@ -1,10 +1,10 @@
 <div class="main_content">
 
-	<div class="float_left">
-		<a href="<%= @fevent.url %>" target="_blank"><img src="<%= @fevent.imageurl %>" class="show_event_image"></a>
+	<div class="col-lg-2 col-xs-12">
+		<a href="<%= @fevent.url %>" target="_blank"><img src="<%= @fevent.imageurl %>" class="show_fevent_image"></a>
 	</div>
 
-	<div>
+	<div class="col-lg-10 col-xs-12">
 		<h1><%= @fevent.title %></h1>
 		@ <%= @fevent.venue %>
 

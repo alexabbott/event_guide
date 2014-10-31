@@ -1,3 +1,26 @@
 // Place all the styles related to the fevents controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.carousel-caption {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.4em;
+	text-shadow: 1px 1px 5px rgba(0,0,0,0.9), -1px -1px 5px rgba(0,0,0,0.9);
+	-webkit-text-shadow: 1px 1px 5px rgba(0,0,0,0.9), -1px -1px 5px rgba(0,0,0,0.9);
+}
+
+
+.carousel_picker {
+	position: absolute;
+	top: 50%;
+}
+
+.index_fevent_image {
+	width: 100%;
+}
+
+
+.show_fevent_image {
+	width: 200px;
+	margin: 25px 10px 0 0px;
+}

@@ -1,0 +1,55 @@
+<!-- Carousel starts here -->
+
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	  </ol>
+
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner">
+	    
+	    <div class="item active">
+	      <%= link_to image_tag("scon.jpg", :width => "100%", :alt => "SantaCon", :class => "visible-xl-block visible-lg-block visible-md-block visible-sm-block"), "fevents/544e77e2416c65249c020000" %>
+	      <%= link_to image_tag("scontall.jpg", :width => "100%", :alt => "SantaCon", :class => "visible-xs-block"), "fevents/544e77e2416c65249c020000" %>
+	      <div class="carousel-caption">
+	        <h3><%= @fevents.second.title %></h3>
+	        <p><span class="at_symbol">@</span> <%= @fevents.second.venue %></p>
+	        <p><%= @fevents.second.date.strftime("%A, %b %d") %> <span class="at_symbol">|</span> <%= @fevents.second.time.strftime("%I:%M %p") %></p>
+	      </div>
+	    </div>
+
+	    <div class="item">
+	      <%= link_to image_tag("grandpark.jpg", :width => "100%", :alt => "New Year's Eve LA", :class => "visible-xl-block visible-lg-block visible-md-block visible-sm-block"), "fevents/5452efa0616c6585bc000000" %>	
+	      <%= link_to image_tag("grandparktall.jpg", :width => "100%", :alt => "New Year's Eve LA", :class => "visible-xs-block"), "fevents/5452efa0616c6585bc000000" %>	      
+	      <div class="carousel-caption">
+	        <h3><%= @fevents.last.title %></h3>
+			 <p><span class="at_symbol">@</span> <%= @fevents.last.venue %></p>
+			 <p><%= @fevents.last.date.strftime("%A, %b %d") %> <span class="at_symbol">|</span> <%= @fevents.last.time.strftime("%I:%M %p") %></p>
+	      </div>
+	    </div>
+
+	    <div class="item">
+	      <%= link_to image_tag("west.jpg", :width => "100%", :alt => "Westside Thanksgiving", :class => "visible-xl-block visible-lg-block visible-md-block visible-sm-block"), "fevents/544e840f416c653441000000" %>
+	      <%= link_to image_tag("westtall.jpg", :width => "100%", :alt => "Westside Thanksgiving", :class => "visible-xs-block"), "fevents/544e840f416c653441000000" %>	      
+	      <div class="carousel-caption">
+	        <h3><%= @fevents.first.title %></h3>
+			 <p><span class="at_symbol">@</span> <%= @fevents.first.venue %></p>
+			 <p><%= @fevents.first.date.strftime("%A, %b %d") %> <span class="at_symbol">|</span> <%= @fevents.first.time.strftime("%I:%M %p") %></p>
+	      </div>
+	    </div>
+
+	  </div>
+
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	    <i class="fa fa-caret-left fa-3x carousel_picker"></i></span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	    <i class="fa fa-caret-right fa-3x carousel_picker"></i></span>
+	  </a>
+	</div>
+
+		<!-- Carousel ends here -->
