@@ -9,6 +9,7 @@
 		@ <%= @fevent.venue %>
 
 		<p><%= @fevent.date.strftime("%A, %b %d") %> at <%= @fevent.time.strftime("%I:%M %p") %></p>
+		<p><%= @fevent.description %></p>
 		<p><%= link_to "Back", events_path %></p>
 	</div>
 
