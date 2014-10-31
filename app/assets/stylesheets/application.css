@@ -65,27 +65,17 @@ h3 {
 	font-color: #ffffff;
 }
 
-.add_button {
+.event_modal_button {
 	float: right;
-	width: 180px;
-	height: 40px;
-	border-radius: 2px;
-	background: #2da9e3;
-	color: #fff;
-	text-align: center;
-	font-size: 1.3em;
-	line-height: 40px;
 	display: inline-block;
 	position: absolute;
 	top: -5px;
 	right: 185px;
 }
 
-.add_button:hover {
-	background: #fff;
-	line-height: 36px;
-	color: #2da9e3;
-	border: 2px solid #2da9e3;
+.signup_text {
+	color: #ffffff;
+	font-size: 1.2em;
 }
 
 .logo {

@@ -1,0 +1,52 @@
+<!-- Modal -->
+<div class="modal fade" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h2 class="modal-title center" id="myModalLabel">Add a New Event</h2>
+      </div>
+      <div class="modal-body">
+        <div class="event_form">
+		<%= form_for @event do |f| %>
+			<p><div class="col-lg-4">Event Name:</div>
+				<div class="col-lg-8 form_field"><%= f.text_field :title %></div></p>
+
+			<p><div class="col-lg-4">Date:</div>
+				<div class="col-lg-8 form_field"> <%= f.date_field :date %></div></p>
+
+			<p><div class="col-lg-4">Time:</div>
+				<div class="col-lg-8 form_field"> <%= f.time_field :time %></div></p>
+
+			<p><div class="col-lg-4">Venue:</div>
+				<div class="col-lg-8 form_field"> <%= f.text_field :venue %></div></p>
+
+			<p><div class="col-lg-4">Address:</div>
+				<div class="col-lg-8 form_field"> <%= f.text_field :address %></div></p>
+
+			<p><div class="col-lg-4">Neighborhood:</div>
+				<div class="col-lg-8 form_field"> <%= f.select :neighborhood, [['Choose a neighborhood...'],['Beverly Hills','beverly hills'],['Burbank','burbank'],['Culver City','culver city'],['Downtown LA','downtown la'],['Eagle Rock','eagle rock'],['East LA','east la'],['Echo Park','echo park'],['Exposition Park / USC','exposition park / usc'],['Glendale','glendale'],['Griffith Park','griffith park'],['Hermosa Beach','hermosa beach'],['Highland Park','highland park'],['Hollywood','hollywood'],['Koreatown','koreatown'],['Long Beach','long beach'],['Los Feliz','los feliz'],['Malibu','malibu'],['Manhattan Beach','manhattan beach'],['Marina del Rey','marina del rey'],['Mid-City','mid-city'],['North Hollywood','north hollywood'],['Orange County','orange county'],['Pasadena','pasadena'],['Pomona','pomona'],['San Gabriel Valley','san gabriel valley'],['Santa Monica','santa monica'],['Sherman Oaks','sherman oaks'],['Silver Lake','silver lake'],['Studio City','studio city'],['Universal City','universal city'],['Venice','venice'],['West Hollywood','west hollywood'],['Westwood','westwood'],['Other...','other...']] %></div></p>
+
+			<p><div class="col-lg-4">Event URL:</div>
+				<div class="col-lg-8 form_field"> <%= f.text_field :url %></div></p>
+
+			<p><div class="col-lg-4">Image URL:</div>
+				<div class="col-lg-8 form_field"> <%= f.text_field :imageurl %></div></p>
+
+			<p><div class="col-lg-4">Event Type:</div>
+				<div class="col-lg-8 form_field"> <%= f.select :category, [['Choose a category...'],['Art Walk','art walk'],['Community','community'],['Festival','festival'],['Free Booze','free booze'],['Free Food','free food'],['Free Music','free music'],['Free Party','free party'],['Free Yoga','free yoga'],['Street Fair','street fair'],['Other','other']] %></div></p>
+
+			<p><div class="col-lg-4">Description:</div>
+				<div class="col-lg-8 form_field"> <%= f.text_area :description %></div></p>
+
+			<div class="form_submit"><%= f.submit "Add new event" %></div>
+
+		<% end %>
+	</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
