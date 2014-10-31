@@ -23,6 +23,74 @@ def index
 		@events = Event.where(:category => "street fair")
 	when "other"
 		@events = Event.where(:category => "other")
+	when "beverly_hills"
+		@events = Event.where(:neighborhood => "beverly hills")	
+	when "burbank"
+		@events = Event.where(:neighborhood => "burbank")
+	when "culver_city"
+		@events = Event.where(:neighborhood => "culver city")
+	when "downtown_la"
+		@events = Event.where(:neighborhood => "downtown la")
+	when "eagle_rock"
+		@events = Event.where(:neighborhood => "eagle rock")
+	when "east_la"
+		@events = Event.where(:neighborhood => "east la")
+	when "echo_park"
+		@events = Event.where(:neighborhood => "echo park")
+	when "exposition_park"
+		@events = Event.where(:neighborhood => "exposition park / usc")
+	when "glendale"
+		@events = Event.where(:neighborhood => "glendale")
+	when "griffith_park"
+		@events = Event.where(:neighborhood => "griffith park")
+	when "hermosa_beach"
+		@events = Event.where(:neighborhood => "hermosa beach")
+	when "highland_park"
+		@events = Event.where(:neighborhood => "highland park")
+	when "hollywood"
+		@events = Event.where(:neighborhood => "hollywood")
+	when "koreatown"
+		@events = Event.where(:neighborhood => "koreatown")
+	when "long_beach"
+		@events = Event.where(:neighborhood => "long beach")
+	when "los_feliz"
+		@events = Event.where(:neighborhood => "los feliz")
+	when "malibu"
+		@events = Event.where(:neighborhood => "malibu")
+	when "manhattan_beach"
+		@events = Event.where(:neighborhood => "manhattan beach")
+	when "marina_del_rey"
+		@events = Event.where(:neighborhood => "marina del rey")
+	when "mid_city"
+		@events = Event.where(:neighborhood => "mid-city")
+	when "north_hollywood"
+		@events = Event.where(:neighborhood => "north hollywood")
+	when "orange_county"
+		@events = Event.where(:neighborhood => "orange county")
+	when "pasadena"
+		@events = Event.where(:neighborhood => "pasadena")
+	when "pomona"
+		@events = Event.where(:neighborhood => "pomona")
+	when "san_gabriel_valley"
+		@events = Event.where(:neighborhood => "san gabriel valley")
+	when "santa_monica"
+		@events = Event.where(:neighborhood => "santa monica")
+	when "sherman_oaks"
+		@events = Event.where(:neighborhood => "sherman oaks")
+	when "silver_lake"
+		@events = Event.where(:neighborhood => "silver lake")
+	when "studio_city"
+		@events = Event.where(:neighborhood => "studio city")
+	when "universal_city"
+		@events = Event.where(:neighborhood => "universal city")
+	when "venice"
+		@events = Event.where(:neighborhood => "venice")
+	when "west_hollywood"
+		@events = Event.where(:neighborhood => "west hollywood")
+	when "westwood"
+		@events = Event.where(:neighborhood => "westwood")
+	when "other"
+		@events = Event.where(:neighborhood => "other...")
 	when "all_events"
 		@events = Event.all.sort_by &:date
 	else

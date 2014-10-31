@@ -1,4 +1,5 @@
-<br><br><br><h1>Login</h1>
+<br><br><br><br>
+<h1 class="center">Login</h1>
 <%= form_for(@user, {url:sessions_path}) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -12,16 +13,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-  <div class="actions">
+<div class="event_form">
+  <p><div class="field">
+    <div class="col-lg-4"><%= f.label :email %></div>
+    <div class="col-lg-8 form_field"><%= f.text_field :email %></div>
+  </div></p>
+  <p><div class="field">
+    <div class="col-lg-4"><%= f.label :password %></div>
+    <div class="col-lg-8 form_field"><%= f.password_field :password %></div>
+  </div></p>
+  <div class="actions form_submit">
     <%= f.submit "Login" %>
   </div>
+</div>
 <% end %>
 

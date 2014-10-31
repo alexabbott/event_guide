@@ -12,54 +12,54 @@ Eventguide::Application.routes.draw do
 # CRUD CATEGORY + PROCESS + HTML VERBS
  # CREATE  
  # ---  BLANK  
- get 'events/new' => 'events#new', as: :new_event
+  get 'events/new' => 'events#new', as: :new_event
 
  # ---  SAVE  
- post 'events' => 'events#create', as: :create_event
+  post 'events' => 'events#create', as: :create_event
 
  # READ  
  # ---  LIST  
- get 'events' => 'events#index', as: :events
+  get 'events' => 'events#index', as: :events
 
  # ---  ONE   
- get 'events/:id' => 'events#show', as: :event
+  get 'events/:id' => 'events#show', as: :event
 
  # UPDATE    
  # ---  EDIT  
- get 'events/:id/edit' => 'events#edit', as: :edit_event
+  get 'events/:id/edit' => 'events#edit', as: :edit_event
  # ---  SAVE 
- patch 'events/:id' => 'events#update', as: :update_event
+  patch 'events/:id' => 'events#update', as: :update_event
 
  # DELETE   
  # ---  DELETE  
- delete 'events/:id' => 'events#destroy', as: :delete_event
+  delete 'events/:id' => 'events#destroy', as: :delete_event
 
  # ------
 
 
 
 
- get 'fevents/new' => 'fevents#new', as: :new_fevent
+  get 'fevents/new' => 'fevents#new', as: :new_fevent
 
  # ---  SAVE  
- post 'fevents' => 'fevents#create', as: :create_fevent
+  post 'fevents' => 'fevents#create', as: :create_fevent
 
  # READ  
  # ---  LIST  
- get 'fevents' => 'fevents#index', as: :fevents
+  get 'fevents' => 'fevents#index', as: :fevents
 
  # ---  ONE   
- get 'fevents/:id' => 'fevents#show', as: :fevent
+  get 'fevents/:id' => 'fevents#show', as: :fevent
 
  # UPDATE    
  # ---  EDIT  
- get 'fevents/:id/edit' => 'fevents#edit', as: :edit_fevent
+  get 'fevents/:id/edit' => 'fevents#edit', as: :edit_fevent
  # ---  SAVE 
- patch 'fevents/:id' => 'fevents#update', as: :update_fevent
+  patch 'fevents/:id' => 'fevents#update', as: :update_fevent
 
  # DELETE   
  # ---  DELETE  
- delete 'fevents/:id' => 'fevents#destroy', as: :delete_fevent
+  delete 'fevents/:id' => 'fevents#destroy', as: :delete_fevent
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
