@@ -103,15 +103,16 @@ h3 {
 	height: 165px;
 	background: rgba(0,0,0,0.8);
 	margin-top: 20px;
-	padding-top: 25px;
+	padding-top: 30px;
 	display: inline-block;
 	vertical-align: middle;
 	font-family: 'Roboto', Arial, sans-serif;
 }
 
 .footer_text {
-	width: 400px;
+	width: 330px;
 	margin: 0 auto;
+	font-size: 0.9em;
 }
 
 .footer_logo {

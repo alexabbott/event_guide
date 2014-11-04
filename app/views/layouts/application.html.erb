@@ -26,30 +26,43 @@
   <script type="text/javascript">
 
  $(document).ready(function () {
-    var map;
-    var elevator;
-    var myOptions = {
-        zoom: 11,
-        center: new google.maps.LatLng(34.0500, -118.2500),
-        mapTypeId: 'terrain'
-    };
-    map = new google.maps.Map($('#map-canvas')[0], myOptions);
+      var map;
+      var elevator;
+      var myOptions = {
+          zoom: 11,
+          center: new google.maps.LatLng(34.0500, -118.2500),
+          mapTypeId: 'terrain',
+          scrollwheel: false
+      };
+      map = new google.maps.Map($('#map-canvas')[0], myOptions);
 
-    var addresses = ['<%= @event.address %>'];
+      var addresses = ['<%= @event.address %>'];
 
-    for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
-            var p = data.results[0].geometry.location
-            var latlng = new google.maps.LatLng(p.lat, p.lng);
-            new google.maps.Marker({
-                position: latlng,
-                map: map
-            });
+      for (var x = 0; x < addresses.length; x++) {
+          $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
+              var p = data.results[0].geometry.location
+              var latlng = new google.maps.LatLng(p.lat, p.lng);
+               
+              var marker = new google.maps.Marker({
+                  position: latlng,
+                  map: map
+              });
+              var infowindow = new google.maps.InfoWindow({
+                content: '<strong><%= @event.title %></strong><br>@ <%= @event.venue %><br><%= @event.address %>'
+              });
+        
+              google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map,marker);
+              });
 
-        });
-    }
+              map.setCenter(latlng);
+
+          });
+      }
+      
 
 });
+
   </script>
   <%= csrf_meta_tags %>
 </head>
