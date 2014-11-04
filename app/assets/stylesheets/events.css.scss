@@ -29,12 +29,20 @@ nav {
 	font-family: 'Roboto', sans-serif;
 }
 
-.nav_center {
-	margin-left: 40%;
-}
 
-.dropdown {
-	width: 140px;
+@media (min-width: 768px){
+	.navbar-nav {
+        margin: 0 auto;
+        display: table;
+        table-layout: auto;
+        float: none;
+        width: 100%;
+    }
+    .navbar-nav>li {
+        display: table-cell;
+        float: none;
+        text-align: center;
+    }
 }
 
 .each_event {
