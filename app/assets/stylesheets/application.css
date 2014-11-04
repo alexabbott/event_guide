@@ -74,7 +74,7 @@ h3 {
 	float: right;
 	display: inline-block;
 	position: absolute;
-	top: -5px;
+	top: -7px;
 	right: 185px;
 }
 
@@ -92,7 +92,7 @@ h3 {
 .small_logo {
 	width: 200px;
 	display: inline;
-	margin: 15px 0 5px 15px;
+	margin: 20px 0 5px 15px;
 }
 
 .footer {

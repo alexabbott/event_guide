@@ -2,10 +2,15 @@
 <html>
 <head>
   <title>LA Free Events Guide</title>
+  <!-- Font awesome icons -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Google font -->
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <script type="text/javascript">var switchTo5x=true;</script>
+	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "f15a41ed-c1dc-46ac-9928-5284057cc4a4", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
   <%= csrf_meta_tags %>
 </head>
 <body style="background-color:#e6e6e6;">
@@ -15,7 +20,6 @@
 <%= yield %>
 
 <br>
-
 
 </body>
 </html>

@@ -31,7 +31,7 @@
 				<div class="col-lg-8 form_field"> <%= f.text_field :url %></div></p>
 
 			<p><div class="col-lg-4">Image URL:</div>
-				<div class="col-lg-8 form_field"> <%= f.text_field :imageurl %></div></p>
+				<div class="col-lg-8 form_field"> <%= f.text_field :imageurl, placeholder: 'optimal size is 200x400 '%></div></p>
 
 			<p><div class="col-lg-4">Event Type:</div>
 				<div class="col-lg-8 form_field"> <%= f.select :category, [['Choose a category...'],['Art Walk','art walk'],['Community','community'],['Festival','festival'],['Free Booze','free booze'],['Free Food','free food'],['Free Music','free music'],['Free Party','free party'],['Free Yoga','free yoga'],['Street Fair','street fair'],['Other','other']] %></div></p>
