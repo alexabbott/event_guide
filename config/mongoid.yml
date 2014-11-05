@@ -59,7 +59,6 @@ production:
   sessions:
     default:
       uri: <%= ENV['MONGOHQ_URL'] %>
-
 test:
   sessions:
     default:
