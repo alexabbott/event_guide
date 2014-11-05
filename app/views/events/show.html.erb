@@ -30,11 +30,11 @@
 		<p><%= link_to "Back", events_path %></p>
 	</div>
 
-	<div id="map_canvas"></div>
+
 
 	<p><iframe src="<%= @event.url %>" class="iframe animated fadeIn" frameBorder="0"></iframe></p>
 
-	
+	<div id="map_canvas"></div>
 </div>
 
 	<%= render :partial => 'footer.html.erb' %>
