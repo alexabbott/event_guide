@@ -19,7 +19,13 @@
 				<span class="at_symbol">@</span> <%= e.venue %></p>
 				<p><%= e.date.strftime("%A, %b %d") %> <span class="at_symbol">|</span> <%= e.time.strftime("%I:%M %p") %>
 			</div>
-			<img src="<%= e.imageurl %>" class="index_event_image"></a>
+			<% if e.image.file? %>
+  				<%= image_tag e.image.url, :class => 'index_event_image' %>
+			<% else %>
+  				<img src="<%= e.imageurl %>" class="index_event_image">
+			<% end %>
+			</a>
+
 		</div>
 	<% end %>
 

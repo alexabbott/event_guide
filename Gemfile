@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'mongoid', github: 'mongoid/mongoid'
 
+gem "mongoid-paperclip", "~> 0.0.8", :require => "mongoid_paperclip"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 

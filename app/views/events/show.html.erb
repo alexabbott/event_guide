@@ -3,7 +3,13 @@
  <div class="main_content">
 
 	<div class="col-lg-3 col-xs-12">
-		<a href="<%= @event.url %>" target="_blank"><img src="<%= @event.imageurl %>" class="show_event_image"></a>
+		<a href="<%= @event.url %>" target="_blank">
+		<% if @event.image.file? %>
+  			<%= image_tag @event.image.url, :class => 'show_event_image' %>
+		<% else %>
+  			<img src="<%= @event.imageurl %>" class="show_event_image">
+		<% end %>
+		</a>
 	</div>
 
 	<div class="col-lg-9 col-xs-12">

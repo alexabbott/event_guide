@@ -2,10 +2,6 @@
 <div class="modal fade" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h2 class="modal-title center" id="myModalLabel">Add a New Event</h2>
-      </div>
       <div class="modal-body">
       	<% if @event.errors.any? %>
 		    <ul class="list-group">
@@ -16,6 +12,8 @@
 		      <% end %>
 		    </ul>
 		<% end %>
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<h2 class="modal-title center" id="myModalLabel">Add a New Event</h2>
         <div class="event_form">
 		<%= form_for @event do |f| %>
 			<p><div class="col-lg-4">Event Name:</div>
@@ -41,6 +39,12 @@
 
 			<p><div class="col-lg-4">Image URL:</div>
 				<div class="col-lg-8 form_field"> <%= f.text_field :imageurl, placeholder: 'optimal size is 600x300 '%></div></p>
+
+			<p><div class="col-lg-4"></div>
+				<div class="col-lg-8 form_field"> or </div></p>
+
+			<p><div class="col-lg-4">Upload Image:</div>
+				<div class="col-lg-8 form_field"><%= f.file_field :image %></div></p>
 
 			<p><div class="col-lg-4">Event Type:</div>
 				<div class="col-lg-8 form_field"> <%= f.select :category, [['Choose a category...'],['Art Walk','art walk'],['Community','community'],['Festival','festival'],['Free Booze','free booze'],['Free Food','free food'],['Free Music','free music'],['Free Party','free party'],['Free Yoga','free yoga'],['Street Fair','street fair'],['Other','other']] %></div></p>

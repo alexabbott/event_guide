@@ -1,5 +1,6 @@
 class Event
   include Mongoid::Document
+  include Mongoid::Paperclip
   field :title, type: String
   field :date, type: Date
   field :time, type: Time
@@ -10,5 +11,7 @@ class Event
   field :venue, type: String
   field :address, type: String
   field :neighborhood, type: String
-  validates_presence_of :title, :date, :time, :url, :imageurl, :category, :venue, :address, :neighborhood
+  has_mongoid_attached_file :image
+  validates_attachment_content_type :image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_presence_of :title, :date, :time, :url, :category, :venue, :address, :neighborhood
 end
