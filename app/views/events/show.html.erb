@@ -6,7 +6,7 @@
 		<a href="<%= @event.url %>" target="_blank"><img src="<%= @event.imageurl %>" class="show_event_image"></a>
 	</div>
 
-	<div class="col-lg-6 col-xs-12">
+	<div class="col-lg-9 col-xs-12">
 		<h1><%= @event.title %></h1>
 		<div class="visible-xs-block social_small">
 
@@ -30,10 +30,11 @@
 		<p><%= link_to "Back", events_path %></p>
 	</div>
 
+	<div id="map_canvas"></div>
 
 	<p><iframe src="<%= @event.url %>" class="iframe animated fadeIn" frameBorder="0"></iframe></p>
 
-	<div id="map_canvas"></div>
+	
 </div>
 
 	<%= render :partial => 'footer.html.erb' %>

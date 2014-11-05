@@ -10,4 +10,5 @@ class Event
   field :venue, type: String
   field :address, type: String
   field :neighborhood, type: String
+  validates_presence_of :title, :date, :time, :url, :imageurl, :category, :venue, :address, :neighborhood
 end
