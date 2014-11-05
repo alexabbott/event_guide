@@ -1,3 +1,5 @@
+<%= render :partial => 'maps_show.html.erb' %>
+
 <div class="main_content">
 
 	<div class="col-lg-3 col-xs-12">
@@ -33,6 +35,8 @@
 
 
 	<p><iframe src="<%= @fevent.url %>" class="iframe animated fadeIn" frameBorder="0"></iframe></p>
+
+	<div id="map_canvas"></div>
 </div>
 
 <%= render :partial => 'footer.html.erb' %>

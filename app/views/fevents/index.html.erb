@@ -1,8 +1,5 @@
 <div class="main_content">
 
-	<a href="/events/new" border="0"><div class="add_button">Add a New Event</div></a>
-
-
 	<!-- Carousel starts here -->
 
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -15,22 +12,37 @@
 
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner">
+	    
 	    <div class="item active">
-	      <%= link_to image_tag("scon.jpg", :width => "100%", :alt => "SantaCon")  %>
+	      <%= link_to image_tag("scon.jpg", :width => "100%", :alt => "SantaCon", :class => "visible-xl-block visible-lg-block visible-md-block visible-sm-block"), "fevents/544e77e2416c65249c020000" %>
+	      <%= link_to image_tag("scontall.jpg", :width => "100%", :alt => "SantaCon", :class => "visible-xs-block"), "fevents/544e77e2416c65249c020000" %>
 	      <div class="carousel-caption">
-	        <h3><%= @fevents.last.title %></h3>
-	        <p><span class="at_symbol">@</span> <%= @fevents.last.venue %></p>
-	        <p><%= @fevents.last.date.strftime("%A, %b %d") %> <span class="at_symbol">|</span> <%= @fevents.last.time.strftime("%I:%M %p") %></p>
+	        <h3>SantaCon 2014</h3>
+	        <p><span class="at_symbol">@</span> All Over LA</p>
+	        <p>Saturday, Dec 13 <span class="at_symbol">|</span> 6:30 PM</p>
 	      </div>
 	    </div>
+
 	    <div class="item">
-	      <%= link_to image_tag("west.jpg", :width => "100%", :alt => "Westside Thanksgiving") %>	      
+	      <%= link_to image_tag("grandpark.jpg", :width => "100%", :alt => "New Year's Eve LA", :class => "visible-xl-block visible-lg-block visible-md-block visible-sm-block"), "fevents/5452efa0616c6585bc000000" %>	
+	      <%= link_to image_tag("grandparktall.jpg", :width => "100%", :alt => "New Year's Eve LA", :class => "visible-xs-block"), "fevents/5452efa0616c6585bc000000" %>	      
 	      <div class="carousel-caption">
-	        <h3><%= @fevents.first.title %></h3>
-			 <p><span class="at_symbol">@</span> <%= @fevents.first.venue %></p>
-			 <p><%= @fevents.first.date.strftime("%A, %b %d") %> <span class="at_symbol">|</span> <%= @fevents.first.time.strftime("%I:%M %p") %></p>
+	        <h3>New Year's Eve LA</h3>
+			 <p><span class="at_symbol">@</span> Grand Park</p>
+			 <p>Wednesday, Dec 31 <span class="at_symbol">|</span> 8:00 PM</p>
 	      </div>
 	    </div>
+
+	    <div class="item">
+	      <%= link_to image_tag("west.jpg", :width => "100%", :alt => "Westside Thanksgiving", :class => "visible-xl-block visible-lg-block visible-md-block visible-sm-block"), "fevents/544e840f416c653441000000" %>
+	      <%= link_to image_tag("westtall.jpg", :width => "100%", :alt => "Westside Thanksgiving", :class => "visible-xs-block"), "fevents/544e840f416c653441000000" %>	      
+	      <div class="carousel-caption">
+	        <h3>Westside Thanksgiving</h3>
+			 <p><span class="at_symbol">@</span> Greater LA VA Campus</p>
+			 <p>Thursday, Nov 27 <span class="at_symbol">|</span> 11:00 AM</p>
+	      </div>
+	    </div>
+
 	  </div>
 
 	  <!-- Controls -->
@@ -43,5 +55,4 @@
 	</div>
 
 		<!-- Carousel ends here -->
-
 </div>
