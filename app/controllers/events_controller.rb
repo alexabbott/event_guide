@@ -96,7 +96,6 @@ def index
 	else
 		@events = Event.where(:date => (Date.today...Date.parse('2024-10-31'))).all.sort_by &:date
 	end
-	@fevents = Fevent.all.sort_by &:date
 	@event = Event.new
 	@user = User.new
 	@is_login = true
