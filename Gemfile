@@ -4,6 +4,10 @@ gem 'mongoid', github: 'mongoid/mongoid'
 
 gem "mongoid-paperclip", "~> 0.0.8", :require => "mongoid_paperclip"
 
+gem 'aws-s3'
+
+gem 'aws-sdk', '~> 1.57.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
