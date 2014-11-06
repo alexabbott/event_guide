@@ -14,7 +14,7 @@ class Event
   has_mongoid_attached_file :image,
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
-    :path => "/events/:id.:extension",
+    :path => "/:id.:extension",
     :bucket => 'freelaphotos'
   validates_attachment_content_type :image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   validates_presence_of :title, :date, :time, :url, :category, :venue, :address, :neighborhood
