@@ -12,6 +12,7 @@
 		<p>Event URL: <%= f.text_field :url %></p>
 		<p>Image URL: <%= f.text_field :imageurl %></p>
 		<img src="<%= @event.imageurl %>" class="event_image">
+		<p>Upload Img: <%= f.file_field :image %></p>
 		<p>Event Type: <%= f.select :category, [['Choose a category...'],['Art Walk','art walk'],['Community','community'],['Festival','festival'],['Free Booze','free booze'],['Free Food','free food'],['Free Music','free music'],['Free Party','free party'],['Free Yoga','free yoga'],['Street Fair','street fair'],['Other','other']] %></p>
 		<p>Description: <%= f.text_area :description %></p>
 		
