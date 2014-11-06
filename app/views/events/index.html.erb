@@ -12,7 +12,7 @@
 
 
 	<% @events.each do |e| %>
-		<div class="col-md-3 col-sm-6 events_container">
+		<div class="col-md-3 col-sm-6 col-xs-12 events_container">
 			<a href="/events/<%= e.id %>" class="event_link" style="text-decoration: none; color:black;" name="event_anchor">
 			<div class="each_event">
 				<h3><%= e.title %></h3><br>
@@ -22,7 +22,7 @@
 			<% if e.image.file? %>
   				<%= image_tag e.image.url, :class => 'index_event_image' %>
 			<% else %>
-  				<img src="<%= e.imageurl %>" class="index_event_image">
+  				<%= image_tag e.imageurl, :class => 'index_event_image' %>
 			<% end %>
 			</a>
 
