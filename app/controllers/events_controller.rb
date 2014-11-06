@@ -112,6 +112,8 @@ end
 def show
 	@oneevent = Event.find(params[:id])
 	@event = Event.new
+	@user = User.new
+	@is_login = true
 end
 
 def new
