@@ -30,7 +30,7 @@ nav {
 }
 
 
-@media (min-width: 768px){
+@media (min-width: 1000px){
 	.navbar-nav {
         margin: 0 auto;
         display: table;
@@ -43,6 +43,23 @@ nav {
         float: none;
         text-align: center;
     }
+    #map_canvas {
+    	margin: 20px 20px 10px 0px;
+    	height: 260px;
+    }
+    .map_holder {
+		width: 40%; float: right; margin-right:20px;
+	}
+}
+
+@media (max-width: 999px){
+	.map_holder {
+		width: 100%;
+		padding-top: 20px;
+	}
+	#map_canvas {
+		margin-top: 20px;
+	}
 }
 
 .each_event {
@@ -62,16 +79,17 @@ nav {
 	margin: 25px auto 5px auto;
 }
 
-.social_show {
-	position: absolute;
-	text-align: right;
-	top: 95px;
-	right: 10px;
-	display: inline;
+.socials_large {
+	width: 40px;
+	height: 40px;
+	margin-top: 8px;
 }
 
-.social_small {
-	padding: 4px 0 8px 0;
+.socials_small {
+	width: 40px;
+	height: 40px;
+	margin: 4px 0 18px 0;
+	padding-bottom: 20px;
 }
 
 .social_index {
