@@ -2,34 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.main_content {
-	width: 100%;
-	margin: 78px auto 0 auto;
-	background-color: #e6e6e6;
-}
-
-.more_events_header {
-	text-align: center;
-	padding-bottom: 0;
-	margin-bottom: 0;
-}
-
-.events_container {
-	background-color: #e6e6e6;
-}
-
-.index_event_image {
-	width: 100%;
-	height: 210px;
-	margin: 0px 10px 20px 0px;
-	padding-top: 0;
-}
-
-nav {
-	font-family: 'Roboto', sans-serif;
-}
-
-
 @media (min-width: 1000px){
 	.navbar-nav {
         margin: 0 auto;
@@ -60,8 +32,36 @@ nav {
 	}
 	#map_canvas {
 		margin-top: 20px;
-		width: 100%
+		width: 100%;
+		height: 300px;
 	}
+}
+
+.main_content {
+	width: 100%;
+	margin: 78px auto 0 auto;
+	background-color: #e6e6e6;
+}
+
+.more_events_header {
+	text-align: center;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.events_container {
+	background-color: #e6e6e6;
+}
+
+.index_event_image {
+	width: 100%;
+	height: 210px;
+	margin: 0px 10px 20px 0px;
+	padding-top: 0;
+}
+
+nav {
+	font-family: 'Roboto', sans-serif;
 }
 
 .each_event {
