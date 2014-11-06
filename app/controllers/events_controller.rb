@@ -110,7 +110,8 @@ def index
 end
 
 def show
-	@event = Event.find(params[:id])
+	@oneevent = Event.find(params[:id])
+	@event = Event.new
 end
 
 def new

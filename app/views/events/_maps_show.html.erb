@@ -12,7 +12,7 @@
       };
       map = new google.maps.Map($('#map_canvas')[0], myOptions);
 
-      var addresses = ['<%= @event.address %>'];
+      var addresses = ['<%= @oneevent.address %>'];
 
       for (var x = 0; x < addresses.length; x++) {
           $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
@@ -24,7 +24,7 @@
                   map: map
               });
               var infowindow = new google.maps.InfoWindow({
-                content: '<strong><%= @event.title %></strong><br>@ <%= @event.venue %><br><%= @event.address %>'
+                content: '<strong><%= @oneevent.title %></strong><br>@ <%= @oneevent.venue %><br><%= @oneevent.address %>'
               });
         
               google.maps.event.addListener(marker, 'click', function() {

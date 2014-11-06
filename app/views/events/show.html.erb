@@ -5,34 +5,34 @@
 
 	<div class="col-lg-3 col-xs-12">
 		<a href="<%= @event.url %>" target="_blank">
-		<% if @event.image.file? %>
-  			<%= image_tag @event.image.url, :class => 'show_event_image' %>
+		<% if @oneevent.image.file? %>
+  			<%= image_tag @oneevent.image.url, :class => 'show_event_image' %>
 		<% else %>
-  			<%= image_tag @event.imageurl, :class => 'show_event_image' %>
+  			<%= image_tag @oneevent.imageurl, :class => 'show_event_image' %>
 		<% end %>
 		</a>
 	</div>
 
 	<div class="col-lg-4 col-xs-12">
-		<h1><%= @event.title %></h1>
+		<h1><%= @oneevent.title %></h1>
 
-		<strong><span class="at_symbol">@</span> <%= @event.venue %></strong>
-		<p><%= @event.date.strftime("%A, %b %d") %> at <%= @event.time.strftime("%I:%M %p") %></p>
+		<strong><span class="at_symbol">@</span> <%= @oneevent.venue %></strong>
+		<p><%= @oneevent.date.strftime("%A, %b %d") %> at <%= @oneevent.time.strftime("%I:%M %p") %></p>
 
 
-		<p><%= @event.description %></p>
+		<p><%= @oneevent.description %></p>
 
 		<!-- social share buttons -->
 		<div>
 
-			<a href="http://www.facebook.com/sharer/sharer.php?u=/events/<%= @event.id %>&t=<%= @event.title %>" target="_blank"><img src="../../assets/fb.png" class="socials_large"></a>
+			<a href="http://www.facebook.com/sharer/sharer.php?u=/events/<%= @oneevent.id %>&t=<%= @oneevent.title %>" target="_blank"><img src="../../assets/fb.png" class="socials_large"></a>
 
-			<a href="http://twitter.com/intent/tweet?url=http://free-la.herokuapp.com/events/<%= @event.id %>&text=Check%20out%20<%= @event.title %>%20on%20Free::LA" target="_blank"><img src="../../assets/twit.png" class="socials_large"></a>
+			<a href="http://twitter.com/intent/tweet?url=http://free-la.herokuapp.com/events/<%= @oneevent.id %>&text=Check%20out%20<%= @oneevent.title %>%20on%20Free::LA" target="_blank"><img src="../../assets/twit.png" class="socials_large"></a>
 
-			<a href="mailto:?subject=Check out <%= @event.title %> on Free::LA&amp;body=Check out <%= @event.title %> on Free::LA - http://free-la.herokuapp.com/events/<%= @event.id %>"><img src="../../assets/email.png" class="socials_large"></a>
+			<a href="mailto:?subject=Check out <%= @oneevent.title %> on Free::LA&amp;body=Check out <%= @oneevent.title %> on Free::LA - http://free-la.herokuapp.com/events/<%= @oneevent.id %>"><img src="../../assets/email.png" class="socials_large"></a>
 
 		</div>
-
+		<%= render :partial => 'event_modal.html.erb' %>
 	</div>
 
 	<!-- google map -->
@@ -41,8 +41,8 @@
 	</div>
 
 	<!-- this loads the website for the event -->
-	<p><iframe src="<%= @event.url %>" class="iframe animated fadeIn" frameBorder="0"></iframe></p>
-
+	<p><iframe src="<%= @oneevent.url %>" class="iframe animated fadeIn" frameBorder="0"></iframe></p>
+	
 	
 </div>
 
