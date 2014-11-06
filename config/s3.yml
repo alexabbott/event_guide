@@ -1,9 +1,9 @@
 # config/s3.yml
 production:
-  access_key_id: AKIAJLAPF2TQDXY7EZGA
-  secret_access_key: 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
+  access_key_id: AKIAJ7OCFSQN4MPSQ6VA
+  secret_access_key: 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
   bucket: freelaphotos
 development:
-  access_key_id: AKIAJLAPF2TQDXY7EZGA
-  secret_access_key: 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
+  access_key_id: AKIAJ7OCFSQN4MPSQ6VA
+  secret_access_key: 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
   bucket: freelaphotos
