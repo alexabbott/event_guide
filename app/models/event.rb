@@ -16,8 +16,7 @@ class Event
     :s3_credentials => "#{Rails.root}/config/s3.yml",
     :url =>':s3_domain_url',
     :path => "/:id.:extension",
-    :bucket => 'freelaphotos',
-    :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
+    :bucket => 'freelaphotos'
   validates_attachment_content_type :image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   validates_presence_of :title, :date, :time, :url, :category, :venue, :address, :neighborhood
 

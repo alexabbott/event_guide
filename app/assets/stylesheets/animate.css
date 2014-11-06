@@ -1062,8 +1062,8 @@ Copyright (c) 2014 Daniel Eden
 .fadeIn {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
-  -webkit-animation-delay: 1.8s;
-  animation-delay: 1.8s;
+/*  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;*/
 }
 
 @-webkit-keyframes fadeInDown {
