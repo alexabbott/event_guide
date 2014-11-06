@@ -91,6 +91,14 @@ def index
 		@events = Event.where(:neighborhood => "westwood").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
 	when "other"
 		@events = Event.where(:neighborhood => "other...").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
+	when "thisweek"
+		@events = Event.where(:date => (Date.today...7.days.from_now)).sort_by &:date
+	when "nextweek"
+		@events = Event.where(:date => (DateTime.now.next_week...14.days.from_now)).sort_by &:date
+	when "thismonth"
+		@events = Event.where(:date => (DateTime.now...DateTime.now.end_of_month)).sort_by &:date
+	when "nextmonth"
+		@events = Event.where(:date => (DateTime.now.next_month.beginning_of_month...DateTime.now.next_month.end_of_month)).sort_by &:date
 	when "all_events"
 		@events = Event.where(:date => (Date.today...Date.parse('2024-10-31'))).all.sort_by &:date
 	else

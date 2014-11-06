@@ -14,7 +14,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav nav_center">
-        <li><a href="" data-toggle="modal" data-target="#mapModal">Map</a></li>
+        <li><a href="" data-toggle="modal" data-target="#mapModal">Map View</a></li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Date <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to "All Events", events_path(categoryfilter:"all_events", :anchor => "event_anchor") %></li>
+            <li><%= link_to "This Week", events_path(categoryfilter:"thisweek", :anchor => "event_anchor") %></li>
+            <li><%= link_to "Next Week", events_path(categoryfilter:"nextweek", :anchor => "event_anchor") %></li>
+            <li><%= link_to "This Month", events_path(categoryfilter:"thismonth", :anchor => "event_anchor") %></li>
+            <li><%= link_to "Next Month", events_path(categoryfilter:"nextmonth", :anchor => "event_anchor") %></li>
+          </ul>
+        </li>
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event Type <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -31,6 +43,7 @@
             <li><%= link_to "Other", events_path(categoryfilter:"other", :anchor => "event_anchor") %></li>
           </ul>
         </li>
+
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Neighborhood <span class="caret"></span></a>
