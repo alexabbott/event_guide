@@ -8,6 +8,8 @@ gem 'aws-s3'
 
 gem 'aws-sdk', '~> 1.57.0'
 
+gem "twitter-bootstrap-rails", "~> 2.0rc0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
