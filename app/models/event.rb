@@ -14,6 +14,7 @@ class Event
   has_mongoid_attached_file :image,
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
+    :url =>':s3_domain_url',
     :path => "/:id.:extension",
     :bucket => 'freelaphotos',
     :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
