@@ -7,13 +7,13 @@
 
 <!-- 	<h1 class="more_events_header">More Free Events</h1><br><br>
  -->
- 	<br>
+ 	<a name="event_anchor"><br></a>
 	<%= render :partial => 'filter_nav.html.erb' %>
 
 
 	<% @events.each do |e| %>
 		<div class="col-md-3 col-sm-6 col-xs-12 events_container animated fadeIn">
-			<a href="/events/<%= e.id %>" class="event_link" style="text-decoration: none; color:black;" name="event_anchor">
+			<a href="/events/<%= e.id %>" class="event_link" style="text-decoration: none; color:black;">
 			<div class="each_event">
 				<h3><%= e.title %></h3><br>
 				<span class="at_symbol">@</span> <%= e.venue %></p>
