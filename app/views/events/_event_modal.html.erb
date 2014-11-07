@@ -1,8 +1,10 @@
-<!-- Modal -->
+<!-- Modal to let users add events -->
 <div class="modal fade" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
+
+      	<!-- error handling -->
       	<% if @event.errors.any? %>
 		    <ul class="list-group">
 		      <% @event.errors.full_messages.each do |message| %>
@@ -12,8 +14,11 @@
 		      <% end %>
 		    </ul>
 		<% end %>
+
 		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
 		<h2 class="modal-title center" id="myModalLabel">Add a New Event</h2>
+		
         <div class="event_form">
 		<%= form_for @event do |f| %>
 			<p><div class="col-lg-4">Event Name:</div>

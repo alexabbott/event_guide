@@ -8,18 +8,20 @@
         <h2 class="modal-title center" id="myModalLabel">Login</h2>
       </div>
       <div class="modal-body">
-        <%= form_for(@user, {url:sessions_path}) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <!-- error handling -->
+          <%= form_for(@user, {url:sessions_path}) do |f| %>
+          <% if @user.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+              <ul>
+              <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
 
 <div class="event_form">
   <p><div class="field">

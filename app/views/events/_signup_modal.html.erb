@@ -7,7 +7,9 @@
         <h2 class="modal-title center" id="myModalLabel">Sign Up</h2>
       </div>
       <div class="modal-body">
-<%= form_for(@user) do |f| %>
+
+        <!-- error handling -->
+    <%= form_for(@user) do |f| %>
       <% if @user.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>

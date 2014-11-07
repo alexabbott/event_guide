@@ -1,6 +1,7 @@
 <div class="form_content">
 	<h1 class="form_header">Add a New Event</h1>
 
+	<!-- display error dialogs -->
 	  <% if @event.errors.any? %>
     <div id="error_explanation">
       <h2 class="center"><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
