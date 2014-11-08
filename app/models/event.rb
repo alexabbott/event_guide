@@ -21,6 +21,6 @@ class Event
   validates_presence_of :title, :date, :time, :url, :category, :venue, :address, :neighborhood
 
   def s3_credentials
-    {:bucket => "freelaphotos", :access_key_id => 'AKIAJJJ7GHPHIULSHH5A', :secret_access_key => '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'}
+    {:bucket => "freelaphotos", :access_key_id => ENV['S3_KEY'], :secret_access_key => ENV['S3_SECRET']}
   end
 end

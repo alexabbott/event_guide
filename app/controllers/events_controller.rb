@@ -3,8 +3,6 @@ class EventsController < ApplicationController
 def index
 	category_filter = params[:categoryfilter]
 	case category_filter
-
-	# filter events by category
 	when "art_walk"
 		@events = Event.where(:category => "art walk").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
 	when "community"
@@ -25,8 +23,6 @@ def index
 		@events = Event.where(:category => "street fair").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
 	when "other"
 		@events = Event.where(:category => "other").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
-	
-	# filter events by neighborhood
 	when "beverly_hills"
 		@events = Event.where(:neighborhood => "beverly hills").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
 	when "burbank"
@@ -95,8 +91,6 @@ def index
 		@events = Event.where(:neighborhood => "westwood").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
 	when "other"
 		@events = Event.where(:neighborhood => "other...").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
-	
-	# filter events by date
 	when "thisweek"
 		@events = Event.where(:date => (Date.today...7.days.from_now)).sort_by &:date
 	when "nextweek"
