@@ -10,6 +10,10 @@ gem 'aws-sdk', '~> 1.57.0'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
+gem 'trim_blobs'
+
+gem "paperclip_database", :git => "git://github.com/softace/paperclip_database.git"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
