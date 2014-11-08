@@ -1,0 +1,9 @@
+# config/s3.yml
+production:
+  access_key_id: AKIAJY37NMBX6XGQW7EQ
+  secret_access_key: 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
+  bucket: freelaphotos
+development:
+  access_key_id: AKIAJY37NMBX6XGQW7EQ
+  secret_access_key: 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
+  bucket: freelaphotos

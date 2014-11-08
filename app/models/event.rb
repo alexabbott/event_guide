@@ -13,7 +13,7 @@ class Event
   field :neighborhood, type: String
   has_mongoid_attached_file :image,
     :storage => :database,
-    :s3_credentials => "#{Rails.root}/config/aws.yml",
+    :s3_credentials => "#{Rails.root}/config/s3.yml",
     :url =>':s3_domain_url',
     :path => "/:id.:extension",
     :bucket => 'freelaphotos'
