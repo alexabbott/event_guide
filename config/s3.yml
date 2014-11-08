@@ -1,9 +1,9 @@
 # config/s3.yml
 production:
-  access_key_id: ENV['S3_KEY']
-  secret_access_key: ENV['S3_SECRET']
+  access_key_id: AKIAJ4RJENH4ZVBB2K3Q
+  secret_access_key: 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
   bucket: freelaphotos
 development:
-  access_key_id: ENV['S3_KEY']
-  secret_access_key: ENV['S3_SECRET']
+  access_key_id: AKIAJ4RJENH4ZVBB2K3Q
+  secret_access_key: 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
   bucket: freelaphotos
