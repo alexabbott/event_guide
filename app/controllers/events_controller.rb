@@ -21,8 +21,6 @@ def index
 		@events = Event.where(:category => "free party").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
 	when "free_yoga"
 		@events = Event.where(:category => "free yoga").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
-	when "meet_up"
-		@events = Event.where(:category => "meet up").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
 	when "street_fair"
 		@events = Event.where(:category => "street fair").where(:date => (Date.today...Date.parse('2024-10-31'))).sort_by &:date
 	when "other"

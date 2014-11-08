@@ -10,22 +10,17 @@
 	<!-- filter navigation for events rendered here -->
 	<%= render :partial => 'filter_nav.html.erb' %>
 
-	<!-- show each (non-featured) event in database -->
 	<% @events.each do |e| %>
 		<div class="col-md-3 col-sm-6 col-xs-12 events_container animated fadeInUp">
 
-			<!-- event link -->
 			<a href="/events/<%= e.id %>" class="event_link" style="text-decoration: none; color:black;">
 
 			<div class="each_event">
 
-				<!-- event title -->
 				<h3><%= e.title %></h3><br>
 
-				<!-- event venue -->
 				<span class="at_symbol">@</span> <%= e.venue %></p>
 
-				<!-- event date and time -->
 				<p><%= e.date.strftime("%A, %b %d") %> <span class="at_symbol">|</span> <%= e.time.strftime("%I:%M %p") %>
 			</div>
 
