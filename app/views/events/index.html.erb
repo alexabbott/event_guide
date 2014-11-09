@@ -23,8 +23,11 @@
 
 				<p><%= e.date.strftime("%A, %b %d") %> <span class="at_symbol">|</span> <%= e.time.strftime("%I:%M %p") %>
 			</div>
-
-  				<%= image_tag e.imageurl, :class => 'index_event_image' %>
+			<% if e.imageurl.present? %>
+				<%= image_tag e.imageurl, :class => 'index_event_image' %>
+			<% else %>
+  				<%= image_tag e.image.url, :class => 'index_event_image' %>
+  			<% end %>
 			</a>
 
 		</div>
