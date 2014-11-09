@@ -24,12 +24,7 @@
 				<p><%= e.date.strftime("%A, %b %d") %> <span class="at_symbol">|</span> <%= e.time.strftime("%I:%M %p") %>
 			</div>
 
-			<!-- event image (either uploaded or submitted via image url) -->
-			<% if e.image.file? %>
-  				<%= image_tag e.image.url, :class => 'index_event_image' %>
-			<% else %>
   				<%= image_tag e.imageurl, :class => 'index_event_image' %>
-			<% end %>
 			</a>
 
 		</div>

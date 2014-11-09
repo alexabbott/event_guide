@@ -11,12 +11,12 @@ class Event
   field :venue, type: String
   field :address, type: String
   field :neighborhood, type: String
-  has_mongoid_attached_file :image,
-    :storage => :database,
-    :s3_credentials => "#{Rails.root}/config/s3.yml",
-    :url =>':s3_domain_url',
-    :path => "/:id.:extension",
-    :bucket => 'freelaphotos'
+  has_mongoid_attached_file :image
+    # :storage => :database,
+    # :s3_credentials => "#{Rails.root}/config/s3.yml",
+    # :url =>':s3_domain_url',
+    # :path => "/:id.:extension",
+    # :bucket => 'freelaphotos'
   validates_attachment_content_type :image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   validates_presence_of :title, :date, :time, :url, :category, :venue, :address, :neighborhood
 

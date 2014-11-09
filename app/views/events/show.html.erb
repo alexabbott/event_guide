@@ -6,11 +6,8 @@
 	<!-- event image (show uploaded image if it exists, else show entered imageurl -->
 	<div class="col-lg-3 col-xs-12" style="padding-right: 0px; margin-right: 22px;">
 		
-		<% if @oneevent.image.file? %>
-  			<a href="<%= @event.url %>" target="_blank"><%= image_tag @oneevent.image.url, :class => 'show_event_image' %></a>
-		<% else %>
-  			<a href="<%= @event.url %>" target="_blank"><%= image_tag @oneevent.imageurl, :class => 'show_event_image' %></a>
-		<% end %>
+
+  			<a href="<%= @oneevent.url %>" target="_blank"><%= image_tag @oneevent.imageurl, :class => 'show_event_image' %></a>
 
 	</div>
 
