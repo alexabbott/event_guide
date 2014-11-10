@@ -3658,6 +3658,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   top: auto;
   left: auto;
 }
+
+@media (max-width: 999px){
+  .index_event_image {
+    height: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .nav-tabs.nav-justified > li {
     display: table-cell;
