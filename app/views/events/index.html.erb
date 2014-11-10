@@ -9,9 +9,9 @@
 
 	<!-- filter navigation for events rendered here -->
 	<%= render :partial => 'filter_nav.html.erb' %>
-
+	<div class="container-fluid">
 	<% @events.each do |e| %>
-		<div class="col-md-3 col-sm-6 col-xs-12 events_container animated fadeInUp">
+		<div class="col-md-3 col-sm-12 col-xs-12 events_container center-block animated fadeInUp" style="margin: 0 auto;">
 
 			<a href="/events/<%= e.id %>" class="event_link" style="text-decoration: none; color:black;">
 
@@ -24,15 +24,14 @@
 				<p><%= e.date.strftime("%A, %b %d") %> <span class="at_symbol">|</span> <%= e.time.strftime("%I:%M %p") %>
 			</div>
 			<% if e.imageurl.present? %>
-				<%= image_tag e.imageurl, :class => 'index_event_image' %>
+				<%= image_tag e.imageurl, :class => 'index_event_image', :size => "400x200" %>
 			<% else %>
-  				<%= image_tag e.image.url, :class => 'index_event_image' %>
+  				<%= image_tag e.image.url(:original), :class => 'index_event_image' %>
   			<% end %>
 			</a>
-
 		</div>
 	<% end %>
-
+	</div>
 	<%= render :partial => 'map_modal.html.erb' %>
 
 	<%= render :partial => 'event_modal.html.erb' %>
