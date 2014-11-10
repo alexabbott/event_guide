@@ -12,7 +12,14 @@
   <!-- Google font -->
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <style>
+  @media (max-width:767px){
+    .index_event_image {
+      height: 100%;
+    }
+  }
+  </style>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
   <!-- social sharing scripts -->
